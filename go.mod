@@ -2,15 +2,13 @@ module github.com/zrb-channel/br
 
 go 1.19
 
-replace github.com/zrb-channel/utils v0.0.0 => ../../utils
-
 require (
 	github.com/forgoer/openssl v1.2.1
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/json-iterator/go v1.1.12
 	github.com/satori/go.uuid v1.2.0
 	github.com/shopspring/decimal v1.3.1
-	github.com/zrb-channel/utils v0.0.0
+	github.com/zrb-channel/utils v0.0.0-20220921150943-93342e5677dd
 )
 
 require (
