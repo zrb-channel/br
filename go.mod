@@ -8,7 +8,7 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/satori/go.uuid v1.2.0
 	github.com/shopspring/decimal v1.3.1
-	github.com/zrb-channel/utils v0.0.0-20220921150943-93342e5677dd
+	github.com/zrb-channel/utils v1.0.1
 )
 
 require (

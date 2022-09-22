@@ -72,6 +72,10 @@ func EncryptToBase64(data []byte, key []byte) (string, error) {
 	return base64.StdEncoding.EncodeToString(msg), nil
 }
 
+// Base64Decrypt
+// @param value
+// @param key
+// @date 2022-09-22 21:05:12
 func Base64Decrypt(value string, key []byte) ([]byte, error) {
 	data, err := base64.StdEncoding.DecodeString(value)
 	if err != nil {
