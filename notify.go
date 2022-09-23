@@ -13,6 +13,10 @@ import (
 // @param req
 // @date 2022-09-21 14:47:59
 func Notify(ctx context.Context, req *http.Request) error {
+	if err := ctx.Err(); err != nil {
+		return err
+	}
+
 	body, err := io.ReadAll(req.Body)
 	if err != nil {
 		return err

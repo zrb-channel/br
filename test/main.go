@@ -15,7 +15,7 @@ func main() {
 		Password: "rbbny69zmyp0a",
 	}
 
-	query(ctx, conf)
+	create(ctx, conf)
 }
 
 // query
@@ -40,7 +40,7 @@ func create(ctx context.Context, conf *br.Config) {
 	req := &br.LoginRequest{
 		Pid:         1001,
 		OrderNo:     "2022091421340aa",
-		ChannelId:   121418,
+		ChannelId:   43388530,
 		CompanyName: "广东粤省事智能科技有限公司",
 		CreditCode:  "91440605MA4X6KJM2N",
 		ApplyName:   "刘国琼",
@@ -49,5 +49,10 @@ func create(ctx context.Context, conf *br.Config) {
 		DDAStatus:   99,
 	}
 
-	fmt.Println(br.Login(ctx, conf, req))
+	resp, err := br.Login(ctx, conf, req)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+	fmt.Println(resp.Url)
 }

@@ -13,6 +13,10 @@ import (
 // @param body
 // @date 2022-09-21 14:53:54
 func Query(ctx context.Context, conf *Config, body *QueryRequest) (*QueryResponse, error) {
+	if err := ctx.Err(); err != nil {
+		return nil, err
+	}
+
 	req, err := NewRequest(body, conf.ApyKey)
 	if err != nil {
 		return nil, errors.New("[百融]-创建查询请求失败")
