@@ -17,6 +17,8 @@ type (
 
 		// Password 密码,用于签名
 		Password string
+
+		ChannelId string
 	}
 
 	// BaseRequest 公共请求参数
