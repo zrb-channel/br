@@ -108,7 +108,7 @@ type (
 		LoanDate string `json:"loanDate"`
 
 		// LoanTerm 借款期限（单位月）
-		LoanTerm int `json:"loanTerm"`
+		LoanTerm int64 `json:"loanTerm"`
 
 		// LoantLimit 放款金额（单位元）
 		LoantLimit decimal.Decimal `json:"loantLimit"`
